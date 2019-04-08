@@ -142,13 +142,13 @@ ip6-loopback = ::1
 ^https?:\/\/.+\.googlevideo\.com\/.+&oad - reject
 ^https?:\/\/.+\.googlevideo\.com\/.+ctier - reject
 ^https?:\/\/shimo\.im\/api\/ads\?(.+) - reject
-^https:\/\/github\.com\/(?!.*users)(?!.*trending)(.+?)\/commit\/(.*)$ grape://commit?id=$2&reponame=$1 307
-^https:\/\/github\.com\/(?!.*users)(?!.*trending)(.+?)\/pull\/(\d+)$ grape://pr?number=$2&reponame=$1 307
-^https:\/\/github\.com\/(?!.*users)(?!.*trending)(.+?)\/issues\/(\d+)$ grape://issue?number=$2&reponame=$1 307
-^https:\/\/github\.com\/(?!.*users)(?!.*trending)(.+?)\/pulls\/?$ grape://prs?reponame=$1 307
-^https:\/\/github\.com\/(?!.*users)(?!.*trending)(.+?)\/issues\/?$ grape://issues?reponame=$1 307
-^https:\/\/github\.com\/(?!.*users)(?!.*trending)([\u4E00-\u9FA5A-Za-z0-9._-]+)\/(?!.*blob)([\u4E00-\u9FA5A-Za-z0-9._-]+)(?!.*md)(?!.*png|jpg)$ grape://repo?reponame=$1/$2 307
-^https:\/\/github\.com\/(?!.*users)(?!.*trending)([\u4E00-\u9FA5A-Za-z0-9._-]+)$ grape://user?login=$1 307
+// ^https:\/\/github\.com\/(?!.*users)(?!.*trending)(.+?)\/commit\/(.*)$ grape://commit?id=$2&reponame=$1 307
+// ^https:\/\/github\.com\/(?!.*users)(?!.*trending)(.+?)\/pull\/(\d+)$ grape://pr?number=$2&reponame=$1 307
+// ^https:\/\/github\.com\/(?!.*users)(?!.*trending)(.+?)\/issues\/(\d+)$ grape://issue?number=$2&reponame=$1 307
+// ^https:\/\/github\.com\/(?!.*users)(?!.*trending)(.+?)\/pulls\/?$ grape://prs?reponame=$1 307
+// ^https:\/\/github\.com\/(?!.*users)(?!.*trending)(.+?)\/issues\/?$ grape://issues?reponame=$1 307
+// ^https:\/\/github\.com\/(?!.*users)(?!.*trending)([\u4E00-\u9FA5A-Za-z0-9._-]+)\/(?!.*blob)([\u4E00-\u9FA5A-Za-z0-9._-]+)(?!.*md)(?!.*png|jpg)$ grape://repo?reponame=$1/$2 307
+// ^https:\/\/github\.com\/(?!.*users)(?!.*trending)([\u4E00-\u9FA5A-Za-z0-9._-]+)$ grape://user?login=$1 307
 ^https?:\/\/(www\.)?g\.cn https://www.google.com 302
 ^https?:\/\/(www\.)?google\.cn https://www.google.com 302
 ^https?:\/\/coupon\.m\.jd\.com\/ https://coupon.m.jd.com/ 302
