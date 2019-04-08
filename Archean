@@ -48,7 +48,7 @@ use-keyword-filter = false
 👗 Bilibili = select, 🚀 Direct, 🛥 Select, 🍃 Proxy
 🎮 Steam = select, 🚀 Direct, 🛥 Select, 🍃 Proxy
 🍂 Domestic = select, 🚀 Direct, 🛥 Select, 🍃 Proxy
-☁️  Final = select, 🍃 Proxy, 🛥 Select, 🚀 Direct 
+☁️ Final = select, 🍃 Proxy, 🛥 Select, 🚀 Direct
 🚀 Direct = select, policy-path=https://raw.githubusercontent.com/iarchean/SurgeConfig/master/proxy/direct.list
 🏃 Auto = url-test, policy-path=auto.list, url = http://www.gstatic.com/generate_204, interval = 60
 🛴 Fallback = fallback, policy-path=auto.list, url = http://www.gstatic.com/generate_204, interval = 60
