@@ -28,7 +28,7 @@ use-keyword-filter = false
 
 [Proxy Group]
 🍃 Proxy = select, 🏃 Auto, 🛴 Fallback, 🛥 Select
-🚦 Ad-Block = select, policy-path=https://raw.githubusercontent.com/iarchean/Rules/master/conf/proxy/ad.list
+🚦 Ad-Block = select, policy-path=https://raw.githubusercontent.com/iarchean/SurgeConfig/master/conf/proxy/ad.list
 📡 AppleNews = select, 🍃 Proxy, 🛥 Select, 🚀 Direct
 🧾 AppleNews = select, 🍃 Proxy, 🛥 Select, 🚀 Direct
 🛩 Telegram = select, 🍃 Proxy, 🛥 Select, 🚀 Direct
@@ -49,7 +49,7 @@ use-keyword-filter = false
 🎮 Steam = select, 🚀 Direct, 🛥 Select, 🍃 Proxy
 🍂 Domestic = select, 🚀 Direct, 🛥 Select, 🍃 Proxy
 ☁️ Final = select, 🚀 Direct, 🛥 Select, 🍃 Proxy
-🚀 Direct = select, policy-path=https://raw.githubusercontent.com/iarchean/Rules/master/conf/proxy/direct.list
+🚀 Direct = select, policy-path=https://raw.githubusercontent.com/iarchean/SurgeConfig/master/conf/proxy/direct.list
 🏃 Auto = url-test, policy-path=auto.list, url = http://www.gstatic.com/generate_204, interval = 60
 🛴 Fallback = fallback, policy-path=auto.list, url = http://www.gstatic.com/generate_204, interval = 60
 🛥 Select = select, policy-path=all.list
@@ -60,28 +60,28 @@ use-keyword-filter = false
 AND,((DOMAIN,raw.githubusercontent.com), (USER-AGENT,Surge*)),🚀 Direct,notification-text="规则集更新",notification-interval=3 // 规则更新提醒
 DOMAIN-SUFFIX,archeanz.com,🚀 Direct,notification-text="Archean's Blog",notification-interval=10 // 进入博客提醒
 # 自定义规则
-RULE-SET,https://raw.githubusercontent.com/iarchean/Rules/master/rule/mydirect.list,🚀 Direct // 自定义规则
-RULE-SET,https://raw.githubusercontent.com/iarchean/Rules/master/rule/myreject.list,🚦 Ad-Block // 自定义规则
-RULE-SET,https://raw.githubusercontent.com/iarchean/Rules/master/rule/mytingif.list,🚦 Ad-Block // 自定义规则
-RULE-SET,https://raw.githubusercontent.com/iarchean/Rules/master/rule/myproxy.list,🍃 Proxy // 自定义规则
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/rule/mydirect.list,🚀 Direct // 自定义规则
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/rule/myreject.list,🚦 Ad-Block // 自定义规则
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/rule/mytingif.list,🚦 Ad-Block // 自定义规则
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/rule/myproxy.list,🍃 Proxy // 自定义规则
 # 特殊代理
-RULE-SET,https://raw.githubusercontent.com/iarchean/Rules/master/special/applenews-region.list,📡 AppleNews // AppleNews 地区限制
-RULE-SET,https://raw.githubusercontent.com/iarchean/Rules/master/special/applenews.list,🧾 AppleNews // AppleNews
-RULE-SET,https://raw.githubusercontent.com/iarchean/Rules/master/special/telegram.list,🛩 Telegram // Telegram
-RULE-SET,https://raw.githubusercontent.com/iarchean/Rules/master/special/twitter.list,🐦 Twitter // Twitter
-RULE-SET,https://raw.githubusercontent.com/iarchean/Rules/master/special/facebook.list,👥 Facebook // Facebook
-RULE-SET,https://raw.githubusercontent.com/iarchean/Rules/master/special/netflix.list,🎬 Netflix // Netflix
-RULE-SET,https://raw.githubusercontent.com/iarchean/Rules/master/special/youtube.list,📺 YouTube // YouTube
-RULE-SET,https://raw.githubusercontent.com/iarchean/Rules/master/special/spotify.list,🎧 Spotify // Spotify
-RULE-SET,https://raw.githubusercontent.com/iarchean/Rules/master/special/bbc.list,📻 BBC // BBC
-RULE-SET,https://raw.githubusercontent.com/iarchean/Rules/master/special/paypal.list,💳 PayPal // PayPal
-RULE-SET,https://raw.githubusercontent.com/iarchean/Rules/master/special/microsoft.list,🖥 Microsoft // Microsoft
-RULE-SET,https://raw.githubusercontent.com/iarchean/Rules/master/special/google.list,🔍 Google // Google
-RULE-SET,https://raw.githubusercontent.com/iarchean/Rules/master/special/amazon.list,🛒 Amazon // Amazon
-RULE-SET,https://raw.githubusercontent.com/iarchean/Rules/master/special/unsplash.list,🌁 Unsplash // Unsplash
-RULE-SET,https://raw.githubusercontent.com/iarchean/Rules/master/special/soundcloud.list,🎶 SoundCloud // SoundCloud
-RULE-SET,https://raw.githubusercontent.com/iarchean/Rules/master/special/bilibili.list,👗 Bilibili // Bilibili
-RULE-SET,https://raw.githubusercontent.com/iarchean/Rules/master/special/steam.list,🎮 Steam // Steam
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/applenews-region.list,📡 AppleNews // AppleNews 地区限制
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/applenews.list,🧾 AppleNews // AppleNews
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/telegram.list,🛩 Telegram // Telegram
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/twitter.list,🐦 Twitter // Twitter
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/facebook.list,👥 Facebook // Facebook
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/netflix.list,🎬 Netflix // Netflix
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/youtube.list,📺 YouTube // YouTube
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/spotify.list,🎧 Spotify // Spotify
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/bbc.list,📻 BBC // BBC
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/paypal.list,💳 PayPal // PayPal
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/microsoft.list,🖥 Microsoft // Microsoft
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/google.list,🔍 Google // Google
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/amazon.list,🛒 Amazon // Amazon
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/unsplash.list,🌁 Unsplash // Unsplash
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/soundcloud.list,🎶 SoundCloud // SoundCloud
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/bilibili.list,👗 Bilibili // Bilibili
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/steam.list,🎮 Steam // Steam
 # lhie1规则
 RULE-SET,https://raw.githubusercontent.com/lhie1/Rules/master/Surge3/reject.list,🚦 Ad-Block // 广告
 RULE-SET,https://raw.githubusercontent.com/lhie1/Rules/master/Surge3/apple.list,🍎 Apple // 苹果
