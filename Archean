@@ -28,7 +28,7 @@ use-keyword-filter = false
 
 [Proxy Group]
 🍃 Proxy = select, 🏃 Auto, 🛴 Fallback, 🛥 Select
-🚦 Ad-Block = select, policy-path=https://raw.githubusercontent.com/iarchean/SurgeConfig/master/conf/proxy/ad.list
+🚦 Ad-Block = select, policy-path=https://raw.githubusercontent.com/iarchean/SurgeConfig/master/proxy/ad.list
 📡 AppleNews = select, 🍃 Proxy, 🛥 Select, 🚀 Direct
 🧾 AppleNews = select, 🍃 Proxy, 🛥 Select, 🚀 Direct
 🛩 Telegram = select, 🍃 Proxy, 🛥 Select, 🚀 Direct
@@ -49,7 +49,7 @@ use-keyword-filter = false
 🎮 Steam = select, 🚀 Direct, 🛥 Select, 🍃 Proxy
 🍂 Domestic = select, 🚀 Direct, 🛥 Select, 🍃 Proxy
 ☁️ Final = select, 🚀 Direct, 🛥 Select, 🍃 Proxy
-🚀 Direct = select, policy-path=https://raw.githubusercontent.com/iarchean/SurgeConfig/master/conf/proxy/direct.list
+🚀 Direct = select, policy-path=https://raw.githubusercontent.com/iarchean/SurgeConfig/master/proxy/direct.list
 🏃 Auto = url-test, policy-path=auto.list, url = http://www.gstatic.com/generate_204, interval = 60
 🛴 Fallback = fallback, policy-path=auto.list, url = http://www.gstatic.com/generate_204, interval = 60
 🛥 Select = select, policy-path=all.list
