@@ -1,4 +1,4 @@
-#!MANAGED-CONFIG https://raw.githubusercontent.com/iarchean/SurgeConfig/master/Archean interval=86400
+#!MANAGED-CONFIG https://raw.githubusercontent.com/iarchean/SurgeConfig/master/Archean interval=600
 [General]
 loglevel = notify
 dns-server = 1.2.4.8, 223.5.5.5, 223.6.6.6, 114.114.114.114, 119.29.29.29, 117.50.10.10, system
@@ -48,7 +48,7 @@ use-keyword-filter = false
 👗 Bilibili = select, 🚀 Direct, 🛥 Select, 🍃 Proxy
 🎮 Steam = select, 🚀 Direct, 🛥 Select, 🍃 Proxy
 🍂 Domestic = select, 🚀 Direct, 🛥 Select, 🍃 Proxy
-☁️ Final = select, 🚀 Direct, 🛥 Select, 🍃 Proxy
+☁️  Final = select, 🍃 Proxy, 🛥 Select, 🚀 Direct 
 🚀 Direct = select, policy-path=https://raw.githubusercontent.com/iarchean/SurgeConfig/master/proxy/direct.list
 🏃 Auto = url-test, policy-path=auto.list, url = http://www.gstatic.com/generate_204, interval = 60
 🛴 Fallback = fallback, policy-path=auto.list, url = http://www.gstatic.com/generate_204, interval = 60
