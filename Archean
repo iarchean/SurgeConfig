@@ -109,7 +109,7 @@ RULE-SET,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Rule
 RULE-SET,SYSTEM,🚀 Direct // system
 RULE-SET,LAN,🚀 Direct // 局域网
 GEOIP,CN,🍂 Domestic // 国内IP
-FINAL,☁️ Final,dns-failed
+FINAL,☁️ Final,dns-failed                                                                                                                   // DNS 查询失败走 Final 规则
 
 [Host]
 *.taobao.com = server:223.6.6.6
