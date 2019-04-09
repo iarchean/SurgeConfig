@@ -27,89 +27,89 @@ hide-udp = false
 use-keyword-filter = false
 
 [Proxy Group]
-🍃 Proxy = select, 🏃 Auto, 🛴 Fallback, 🛥 Select
-🚦 Ad-Block = select, policy-path=https://raw.githubusercontent.com/iarchean/SurgeConfig/master/proxy/ad.list
-📡 AppleNews = select, 🍃 Proxy, 🛥 Select, 🚀 Direct
-🧾 AppleNews = select, 🍃 Proxy, 🛥 Select, 🚀 Direct
-🛩 Telegram = select, 🍃 Proxy, 🛥 Select, 🚀 Direct
-🐦 Twitter = select, 🍃 Proxy, 🛥 Select, 🚀 Direct
-👥 Facebook = select, 🍃 Proxy, 🛥 Select, 🚀 Direct
-🎬 Netflix = select, 🍃 Proxy, 🛥 Select, 🚀 Direct
-📺 YouTube = select, 🍃 Proxy, 🛥 Select, 🚀 Direct
-🎧 Spotify = select, 🍃 Proxy, 🛥 Select, 🚀 Direct
-🎶 SoundCloud = select, 🍃 Proxy, 🛥 Select, 🚀 Direct
-📻 BBC = select, 🍃 Proxy, 🛥 Select, 🚀 Direct
-🌁 Unsplash = select, 🍃 Proxy, 🛥 Select, 🚀 Direct
-💳 PayPal = select, 🍃 Proxy, 🛥 Select, 🚀 Direct
-🔍 Google = select, 🍃 Proxy, 🛥 Select, 🚀 Direct
-🛒 Amazon = select, 🚀 Direct, 🛥 Select, 🍃 Proxy
-🖥 Microsoft = select, 🚀 Direct, 🛥 Select, 🍃 Proxy
-🍎 Apple = select, 🚀 Direct, 🛥 Select, 🍃 Proxy
-👗 Bilibili = select, 🚀 Direct, 🛥 Select, 🍃 Proxy
-🎮 Steam = select, 🚀 Direct, 🛥 Select, 🍃 Proxy
-🍂 Domestic = select, 🚀 Direct, 🛥 Select, 🍃 Proxy
-☁️ Final = select, 🍃 Proxy, 🛥 Select, 🚀 Direct
-🚀 Direct = select, policy-path=https://raw.githubusercontent.com/iarchean/SurgeConfig/master/proxy/direct.list
-🏃 Auto = url-test, policy-path=auto.list, url = http://www.gstatic.com/generate_204, interval = 60
-🛴 Fallback = fallback, policy-path=auto.list, url = http://www.gstatic.com/generate_204, interval = 60
-🛥 Select = select, policy-path=all.list
-🐱 Clash = select, policy-path=clash.list
+Proxy = select, Auto, Fallback, Select
+Ad-Block = select, reject-tinygif, reject, direct
+AppleNewsRegion = select, Proxy, Select, Direct
+AppleNews = select, Proxy, Select, Direct
+Telegram = select, Proxy, Select, Direct
+Twitter = select, Proxy, Select, Direct
+Facebook = select, Proxy, Select, Direct
+Netflix = select, Proxy, Select, Direct
+YouTube = select, Proxy, Select, Direct
+Spotify = select, Proxy, Select, Direct
+SoundCloud = select, Proxy, Select, Direct
+BBC = select, Proxy, Select, Direct
+Unsplash = select, Proxy, Select, Direct
+PayPal = select, Proxy, Select, Direct
+Google = select, Proxy, Select, Direct
+Amazon = select, Direct, Select, Proxy
+Microsoft = select, Direct, Select, Proxy
+Apple = select, Direct, Select, Proxy
+Bilibili = select, Direct, Select, Proxy
+Steam = select, Direct, Select, Proxy
+Domestic = select, Direct, Select, Proxy
+Final = select, Proxy, Select, Direct
+Direct = select, direct
+Auto = url-test, policy-path=auto.list,  url = http://www.gstatic.com/generate_204, interval = 60
+Fallback = fallback, policy-path=auto.list,  url = http://www.gstatic.com/generate_204, interval = 60
+Select = select, policy-path=all.list
+Clash = select, policy-path=clash.list
 
 [Rule]
 # 外部资源更新提醒
-AND,((DOMAIN,raw.githubusercontent.com), (USER-AGENT,Surge*)),🚀 Direct,notification-text="规则集更新",notification-interval=3 // 规则更新提醒
-DOMAIN-SUFFIX,archeanz.com,🚀 Direct,notification-text="Archean's Blog",notification-interval=10 // 进入博客提醒
+AND,((DOMAIN,raw.githubusercontent.com), (USER-AGENT,Surge*)),Direct,notification-text="规则集更新",notification-interval=3      // 规则更新提醒
+DOMAIN-SUFFIX,archeanz.com,Direct,notification-text="Archean's Blog",notification-interval=10                                  // 进入博客提醒
 # 自定义规则
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/rule/mydirect.list,🚀 Direct // 自定义规则
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/rule/myreject.list,🚦 Ad-Block // 自定义规则
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/rule/mytingif.list,🚦 Ad-Block // 自定义规则
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/rule/myproxy.list,🍃 Proxy // 自定义规则
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/rule/mydirect.list, Direct                              // 自定义规则
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/rule/myreject.list, Ad-Block                            // 自定义规则
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/rule/mytingif.list, Ad-Block                            // 自定义规则
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/rule/myproxy.list, Proxy                                // 自定义规则
 # 特殊代理
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/applenews-region.list,📡 AppleNews // AppleNews 地区限制
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/applenews.list,🧾 AppleNews // AppleNews
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/telegram.list,🛩 Telegram // Telegram
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/twitter.list,🐦 Twitter // Twitter
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/facebook.list,👥 Facebook // Facebook
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/netflix.list,🎬 Netflix // Netflix
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/youtube.list,📺 YouTube // YouTube
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/spotify.list,🎧 Spotify // Spotify
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/bbc.list,📻 BBC // BBC
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/paypal.list,💳 PayPal // PayPal
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/microsoft.list,🖥 Microsoft // Microsoft
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/google.list,🔍 Google // Google
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/amazon.list,🛒 Amazon // Amazon
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/unsplash.list,🌁 Unsplash // Unsplash
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/soundcloud.list,🎶 SoundCloud // SoundCloud
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/bilibili.list,👗 Bilibili // Bilibili
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/steam.list,🎮 Steam // Steam
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/applenews-region.list, AppleNewsRegion          // AppleNews 地区限制
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/applenews.list, AppleNews                       // AppleNews
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/telegram.list, Telegram                         // Telegram
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/twitter.list, Twitter                           // Twitter
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/facebook.list, Facebook                         // Facebook
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/netflix.list, Netflix                           // Netflix
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/youtube.list, YouTube                           // YouTube
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/spotify.list, Spotify                           // Spotify
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/bbc.list, BBC                                   // BBC
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/paypal.list, PayPal                             // PayPal
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/microsoft.list, Microsoft                       // Microsoft
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/google.list, Google                             // Google
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/amazon.list, Amazon                             // Amazon
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/unsplash.list, Unsplash                         // Unsplash
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/soundcloud.list, SoundCloud                     // SoundCloud
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/bilibili.list, Bilibili                         // Bilibili
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/steam.list, Steam                               // Steam
 # lhie1规则
-RULE-SET,https://raw.githubusercontent.com/lhie1/Rules/master/Surge3/reject.list,🚦 Ad-Block // 广告
-RULE-SET,https://raw.githubusercontent.com/lhie1/Rules/master/Surge3/apple.list,🍎 Apple // 苹果
-RULE-SET,https://raw.githubusercontent.com/lhie1/Rules/master/Surge3/domestic.list,🍂 Domestic // TeamViewer，Steam，12306。。。
-RULE-SET,https://raw.githubusercontent.com/lhie1/Rules/master/Surge3/asiantv.list,🍂 Domestic // Bilibili，IQIYI，letv。。。
-RULE-SET,https://raw.githubusercontent.com/lhie1/Rules/master/Surge3/globaltv.list,🍃 Proxy // Amazon Prime Video，BBC。。。
-RULE-SET,https://raw.githubusercontent.com/lhie1/Rules/master/Surge3/proxy.list,🍃 Proxy // Line，Microsoft，Amazon。。。
+RULE-SET,https://raw.githubusercontent.com/lhie1/Rules/master/Surge3/reject.list, Ad-Block                                     // 广告
+RULE-SET,https://raw.githubusercontent.com/lhie1/Rules/master/Surge3/apple.list, Apple                                         // 苹果
+RULE-SET,https://raw.githubusercontent.com/lhie1/Rules/master/Surge3/domestic.list, Domestic                                   // TeamViewer，Steam，12306。。。
+RULE-SET,https://raw.githubusercontent.com/lhie1/Rules/master/Surge3/asiantv.list, Domestic                                    // Bilibili，IQIYI，letv。。。
+RULE-SET,https://raw.githubusercontent.com/lhie1/Rules/master/Surge3/globaltv.list, Proxy                                      // Amazon Prime Video，BBC。。。
+RULE-SET,https://raw.githubusercontent.com/lhie1/Rules/master/Surge3/proxy.list, Proxy                                         // Line，Microsoft，Amazon。。。
 # Scomper规则
-RULE-SET,https://raw.githubusercontent.com/scomper/surge-list/master/adblock.list,🚦 Ad-Block // 广告
-RULE-SET,https://raw.githubusercontent.com/scomper/surge-list/master/reject.list,🚦 Ad-Block // 广告
-RULE-SET,https://raw.githubusercontent.com/scomper/surge-list/master/apple.list,🍎 Apple // 苹果
-RULE-SET,https://raw.githubusercontent.com/scomper/surge-list/master/cn.list,🍂 Domestic // 微信，QQ，淘宝，优酷。。。
-RULE-SET,https://raw.githubusercontent.com/scomper/surge-list/master/video.list,🍃 Proxy // Netflix，YouTube。。。
-RULE-SET,https://raw.githubusercontent.com/scomper/surge-list/master/blocked.list,🍃 Proxy // Facebook，Google，Twitter。。。
-RULE-SET,https://raw.githubusercontent.com/scomper/surge-list/master/telegram.list,🍃 Proxy // Telegram
+RULE-SET,https://raw.githubusercontent.com/scomper/surge-list/master/adblock.list, Ad-Block                                    // 广告
+RULE-SET,https://raw.githubusercontent.com/scomper/surge-list/master/reject.list, Ad-Block                                     // 广告
+RULE-SET,https://raw.githubusercontent.com/scomper/surge-list/master/apple.list, Apple                                         // 苹果
+RULE-SET,https://raw.githubusercontent.com/scomper/surge-list/master/cn.list, Domestic                                         // 微信，QQ，淘宝，优酷。。。
+RULE-SET,https://raw.githubusercontent.com/scomper/surge-list/master/video.list, Proxy                                         // Netflix，YouTube。。。
+RULE-SET,https://raw.githubusercontent.com/scomper/surge-list/master/blocked.list, Proxy                                       // Facebook，Google，Twitter。。。
+RULE-SET,https://raw.githubusercontent.com/scomper/surge-list/master/telegram.list, Proxy                                      // Telegram
 # ConnersHua规则
-RULE-SET,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/Advertising.list,🚦 Ad-Block // 去广告以及隐私追踪保护
-RULE-SET,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/Hijacking.list,🚦 Ad-Block // 反运营商及臭名昭著的应用劫持保护
-RULE-SET,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/ForeignMedia.list,🍃 Proxy // Youtube、Netflix、HBO、Hulu、BBC iPlayer。。。
-RULE-SET,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/DomesticMedia.list,🍂 Domestic // 媒体应用（愛奇藝台灣站）
-RULE-SET,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/Global.list,🍃 Proxy // 海外加速规则
-RULE-SET,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/Apple.list,🍎 Apple // 部分服务加速 App Store、Movies、Music、News 及海外版 Maps。。。
-RULE-SET,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/China.list,🍂 Domestic // 海内直连规则
+RULE-SET,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/Advertising.list, Ad-Block                 // 去广告以及隐私追踪保护
+RULE-SET,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/Hijacking.list, Ad-Block                   // 反运营商及臭名昭著的应用劫持保护
+RULE-SET,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/ForeignMedia.list, Proxy                   // Youtube、Netflix、HBO、Hulu、BBC iPlayer。。。
+RULE-SET,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/DomesticMedia.list, Domestic               // 媒体应用（愛奇藝台灣站）
+RULE-SET,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/Global.list, Proxy                         // 海外加速规则
+RULE-SET,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/Apple.list, Apple                          // 部分服务加速 App Store、Movies、Music、News 及海外版 Maps。。。
+RULE-SET,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/China.list, Domestic                       // 海内直连规则
 # Surge规则
-RULE-SET,SYSTEM,🚀 Direct // system
-RULE-SET,LAN,🚀 Direct // 局域网
-GEOIP,CN,🍂 Domestic // 国内IP
-FINAL,☁️ Final,dns-failed                                                                                                                   // DNS 查询失败走 Final 规则
+RULE-SET,SYSTEM,Direct                                                                                                         // system
+RULE-SET,LAN,Direct                                                                                                            // 局域网
+GEOIP,CN,Domestic                                                                                                              // 国内IP
+FINAL,Final,dns-failed                                                                                                         // DNS 查询失败走 Final 规则
 
 [Host]
 *.taobao.com = server:223.6.6.6
