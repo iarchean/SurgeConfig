@@ -33,19 +33,19 @@ Proxy = select, Auto, Fallback, Select
 Ad-Block = select, policy-path=https://raw.githubusercontent.com/iarchean/SurgeConfig/master/proxy/ad.list
 AppleNewsRegion = select, Proxy, Select, DirectTo
 AppleNews = select, Proxy, Select, DirectTo
-Telegram = select, Proxy, Select, DirectTo
-Twitter = select, Proxy, Select, DirectTo
-Facebook = select, Proxy, Select, DirectTo
+# Telegram = select, Proxy, Select, DirectTo
+# Twitter = select, Proxy, Select, DirectTo
+# Facebook = select, Proxy, Select, DirectTo
 Netflix = select, Proxy, Select, DirectTo
-YouTube = select, Proxy, Select, DirectTo
+# YouTube = select, Proxy, Select, DirectTo
 Spotify = select, Proxy, Select, DirectTo
 SoundCloud = select, Proxy, Select, DirectTo
-BBC = select, Proxy, Select, DirectTo
-Unsplash = select, Proxy, Select, DirectTo
-PayPal = select, Proxy, Select, DirectTo
+# BBC = select, Proxy, Select, DirectTo
+# Unsplash = select, Proxy, Select, DirectTo
+# PayPal = select, Proxy, Select, DirectTo
 Google = select, Proxy, Select, DirectTo
-Amazon = select, DirectTo, Select, Proxy
-Microsoft = select, DirectTo, Select, Proxy
+# Amazon = select, DirectTo, Select, Proxy
+# Microsoft = select, DirectTo, Select, Proxy
 Apple = select, DirectTo, Select, Proxy
 Bilibili = select, DirectTo, Select, Proxy
 Steam = select, DirectTo, Select, Proxy
@@ -69,18 +69,18 @@ RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/rule/mypr
 # 特殊代理
 RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/applenews-region.list, AppleNewsRegion          // AppleNews 地区限制
 RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/applenews.list, AppleNews                       // AppleNews
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/telegram.list, Telegram                         // Telegram
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/twitter.list, Twitter                           // Twitter
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/facebook.list, Facebook                         // Facebook
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/telegram.list, Proxy                            // Telegram
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/twitter.list, Proxy                             // Twitter
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/facebook.list, Proxy                            // Facebook
 RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/netflix.list, Netflix                           // Netflix
 RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/youtube.list, YouTube                           // YouTube
 RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/spotify.list, Spotify                           // Spotify
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/bbc.list, BBC                                   // BBC
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/paypal.list, PayPal                             // PayPal
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/microsoft.list, Microsoft                       // Microsoft
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/bbc.list, Proxy                                 // BBC
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/paypal.list, Proxy                              // PayPal
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/microsoft.list, Proxy                           // Microsoft
 RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/google.list, Google                             // Google
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/amazon.list, Amazon                             // Amazon
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/unsplash.list, Unsplash                         // Unsplash
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/amazon.list, Proxy                              // Amazon
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/unsplash.list, Proxy                            // Unsplash
 RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/soundcloud.list, SoundCloud                     // SoundCloud
 RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/bilibili.list, Bilibili                         // Bilibili
 RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/steam.list, Steam                               // Steam
