@@ -48,7 +48,7 @@ Apple = select, DirectTo, Select, Proxy
 Bilibili = select, DirectTo, Select, Proxy
 Steam = select, DirectTo, Select, Proxy
 Domestic = select, DirectTo, Select, Proxy
-Final = select, Proxy, Select, DirectTo
+FinalRule = select, Proxy, Select, DirectTo
 DirectTo = select, policy-path=https://raw.githubusercontent.com/iarchean/SurgeConfig/master/proxy/direct.list
 Auto = url-test, policy-path=auto.list,  url = http://www.gstatic.com/generate_204, interval = 60
 Fallback = fallback, policy-path=auto.list,  url = http://www.gstatic.com/generate_204, interval = 60
@@ -60,7 +60,7 @@ Clash = select, policy-path=clash.list
 AND,((DOMAIN,raw.githubusercontent.com), (USER-AGENT,Surge*)),Direct,notification-text="规则集更新",notification-interval=3      // 规则更新提醒
 DOMAIN-SUFFIX,archeanz.com,Direct,notification-text="Archean's Blog",notification-interval=10                                  // 进入博客提醒
 # 自定义规则
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/rule/mydirect.list, Direct                              // 自定义规则
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/rule/mydirect.list, DirectTo                              // 自定义规则
 RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/rule/myreject.list, Ad-Block                            // 自定义规则
 RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/rule/mytingif.list, Ad-Block                            // 自定义规则
 RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/rule/myproxy.list, Proxy                                // 自定义规则
@@ -109,7 +109,7 @@ RULE-SET,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Rule
 RULE-SET,SYSTEM,Direct                                                                                                         // system
 RULE-SET,LAN,Direct                                                                                                            // 局域网
 GEOIP,CN,Domestic                                                                                                              // 国内IP
-FINAL,Final,dns-failed                                                                                                         // DNS 查询失败走 Final 规则
+FINAL,FinalRule,dns-failed                                                                                                         // DNS 查询失败走 Final 规则
 
 [Host]
 *.taobao.com = server:223.6.6.6
