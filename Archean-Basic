@@ -32,9 +32,14 @@ hide-crashlytics-request = true
 hide-udp = false
 use-keyword-filter = false
 
+[Proxy]
+Ad-Pass = direct
+Ad-Block = reject
+Ad-GIF = reject-tinygif
+
 [Proxy Group]
 Proxy = select, Auto, Fallback, Select
-Ad-Block = select, policy-path=https://raw.githubusercontent.com/iarchean/SurgeConfig/master/proxy/ad.list
+Ad-Block = select, Ad-GIF, Ad-Block, Ad-Pass
 Domestic = select, DIRECT, Select, Proxy
 FinalRule = select, Proxy, Select, DIRECT
 Auto = url-test, policy-path=auto.list,  url = http://www.gstatic.com/generate_204, interval = 60
