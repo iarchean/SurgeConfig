@@ -39,7 +39,7 @@ Ad-GIF = reject-tinygif
 
 [Proxy Group]
 Proxy = select, Auto, Fallback, Select
-Ad-Block = select, Ad-GIF, Ad-Block, Ad-Pass
+AdPolicy = select, Ad-GIF, Ad-Block, Ad-Pass
 Domestic = select, DIRECT, Select, Proxy
 FinalRule = select, Proxy, Select, DIRECT
 Auto = url-test, policy-path=auto.list,  url = http://www.gstatic.com/generate_204, interval = 60
@@ -56,7 +56,7 @@ DOMAIN-SUFFIX,archeanz.com,DIRECT,notification-text="Archean's Blog",notificatio
 RULE-SET,https://github.com/Hackl0us/SS-Rule-Snippet/raw/master/Rulesets/Basic/Apple-proxy.list,Proxy
 RULE-SET,https://github.com/Hackl0us/SS-Rule-Snippet/raw/master/Rulesets/Basic/Apple-direct.list,DIRECT
 RULE-SET,https://github.com/Hackl0us/SS-Rule-Snippet/raw/master/Rulesets/Basic/CN.list,DIRECT
-RULE-SET,https://github.com/Hackl0us/SS-Rule-Snippet/raw/master/Rulesets/Basic/common-ad-keyword.list,Ad-Block
+RULE-SET,https://github.com/Hackl0us/SS-Rule-Snippet/raw/master/Rulesets/Basic/common-ad-keyword.list,AdPolicy
 RULE-SET,https://github.com/Hackl0us/SS-Rule-Snippet/raw/master/Rulesets/Basic/foreign.list,Proxy
 RULE-SET,https://github.com/Hackl0us/SS-Rule-Snippet/raw/master/Rulesets/App/social/Telegram.list,Proxy
 
