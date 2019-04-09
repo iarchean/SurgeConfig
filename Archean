@@ -131,6 +131,7 @@ hdslb.com = server:119.29.29.29
 *.netease.com = server:119.29.29.29
 *.mi.com = server:119.29.29.29
 *.xiaomi.com = server:119.29.29.29
+relay01.baidu.com = server:10.10.10.10
 *.baidu.com = server:system
 *.bdstatic.com = server:system
 *.pcbeta.com = 120.52.19.113
