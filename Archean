@@ -28,28 +28,28 @@ use-keyword-filter = false
 
 [Proxy Group]
 Proxy = select, Auto, Fallback, Select
-Ad-Block = select, reject-tinygif, reject, direct
-AppleNewsRegion = select, Proxy, Select, Direct
-AppleNews = select, Proxy, Select, Direct
-Telegram = select, Proxy, Select, Direct
-Twitter = select, Proxy, Select, Direct
-Facebook = select, Proxy, Select, Direct
-Netflix = select, Proxy, Select, Direct
-YouTube = select, Proxy, Select, Direct
-Spotify = select, Proxy, Select, Direct
-SoundCloud = select, Proxy, Select, Direct
-BBC = select, Proxy, Select, Direct
-Unsplash = select, Proxy, Select, Direct
-PayPal = select, Proxy, Select, Direct
-Google = select, Proxy, Select, Direct
-Amazon = select, Direct, Select, Proxy
-Microsoft = select, Direct, Select, Proxy
-Apple = select, Direct, Select, Proxy
-Bilibili = select, Direct, Select, Proxy
-Steam = select, Direct, Select, Proxy
-Domestic = select, Direct, Select, Proxy
-Final = select, Proxy, Select, Direct
-Direct = select, direct
+Ad-Block = select, policy-path=https://raw.githubusercontent.com/iarchean/SurgeConfig/master/proxy/ad.list
+AppleNewsRegion = select, Proxy, Select, DirectTo
+AppleNews = select, Proxy, Select, DirectTo
+Telegram = select, Proxy, Select, DirectTo
+Twitter = select, Proxy, Select, DirectTo
+Facebook = select, Proxy, Select, DirectTo
+Netflix = select, Proxy, Select, DirectTo
+YouTube = select, Proxy, Select, DirectTo
+Spotify = select, Proxy, Select, DirectTo
+SoundCloud = select, Proxy, Select, DirectTo
+BBC = select, Proxy, Select, DirectTo
+Unsplash = select, Proxy, Select, DirectTo
+PayPal = select, Proxy, Select, DirectTo
+Google = select, Proxy, Select, DirectTo
+Amazon = select, DirectTo, Select, Proxy
+Microsoft = select, DirectTo, Select, Proxy
+Apple = select, DirectTo, Select, Proxy
+Bilibili = select, DirectTo, Select, Proxy
+Steam = select, DirectTo, Select, Proxy
+Domestic = select, DirectTo, Select, Proxy
+Final = select, Proxy, Select, DirectTo
+DirectTo = select, policy-path=https://raw.githubusercontent.com/iarchean/SurgeConfig/master/proxy/direct.list
 Auto = url-test, policy-path=auto.list,  url = http://www.gstatic.com/generate_204, interval = 60
 Fallback = fallback, policy-path=auto.list,  url = http://www.gstatic.com/generate_204, interval = 60
 Select = select, policy-path=all.list
