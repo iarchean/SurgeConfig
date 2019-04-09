@@ -59,10 +59,10 @@ Clash = select, policy-path=clash.list
 
 [Rule]
 # 外部资源更新提醒
-AND,((DOMAIN,raw.githubusercontent.com), (USER-AGENT,Surge*)),DirectTo,notification-text="规则集更新",notification-interval=3      // 规则更新提醒
-DOMAIN-SUFFIX,archeanz.com,DirectTo,notification-text="Archean's Blog",notification-interval=10                                  // 进入博客提醒
+AND,((DOMAIN,raw.githubusercontent.com), (USER-AGENT,Surge*)),DirectTo,notification-text="规则集更新",notification-interval=3  // 规则更新提醒
+DOMAIN-SUFFIX,archeanz.com,DirectTo,notification-text="Archean's Blog",notification-interval=10                                // 进入博客提醒
 # 自定义规则
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/rule/mydirect.list, DirectTo                              // 自定义规则
+RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/rule/mydirect.list, DirectTo                            // 自定义规则
 RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/rule/myreject.list, Ad-Block                            // 自定义规则
 RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/rule/mytingif.list, Ad-Block                            // 自定义规则
 RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/rule/myproxy.list, Proxy                                // 自定义规则
