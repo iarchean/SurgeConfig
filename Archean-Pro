@@ -1,6 +1,10 @@
-#!MANAGED-CONFIG https://raw.githubusercontent.com/iarchean/SurgeConfig/master/Archean interval=600
+#!MANAGED-CONFIG https://raw.githubusercontent.com/iarchean/SurgeConfig/master/Archean-Pro interval=600
 # 
-# Shorter URL: https://git.io/ArchSurge
+# Shorter URL: https://git.io/ArchSurgeP
+# Surge 的规则配置手册: https://manual.nssurge.com/
+# 
+# Update: 2019-04-09
+
 [General]
 loglevel = notify
 dns-server = 1.2.4.8, 223.5.5.5, 223.6.6.6, 114.114.114.114, 119.29.29.29, 117.50.10.10, system
@@ -59,31 +63,26 @@ Clash = select, policy-path=clash.list
 
 [Rule]
 # 外部资源更新提醒
-AND,((DOMAIN,raw.githubusercontent.com), (USER-AGENT,Surge*)),DirectTo,notification-text="规则集更新",notification-interval=3  // 规则更新提醒
+AND,((DOMAIN,raw.githubusercontent.com), (USER-AGENT,Surge*)),DirectTo,notification-text="规则集更新",notification-interval=3    // 规则更新提醒
 DOMAIN-SUFFIX,archeanz.com,DirectTo,notification-text="Archean's Blog",notification-interval=10                                // 进入博客提醒
-# 自定义规则
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/rule/mydirect.list, DirectTo                            // 自定义规则
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/rule/myreject.list, Ad-Block                            // 自定义规则
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/rule/mytingif.list, Ad-Block                            // 自定义规则
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/rule/myproxy.list, Proxy                                // 自定义规则
 # 特殊代理
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/applenews-region.list, AppleNewsRegion          // AppleNews 地区限制
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/applenews.list, AppleNews                       // AppleNews
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/telegram.list, Proxy                            // Telegram
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/twitter.list, Proxy                             // Twitter
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/facebook.list, Proxy                            // Facebook
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/netflix.list, Netflix                           // Netflix
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/youtube.list, YouTube                           // YouTube
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/spotify.list, Spotify                           // Spotify
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/bbc.list, Proxy                                 // BBC
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/paypal.list, Proxy                              // PayPal
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/microsoft.list, Proxy                           // Microsoft
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/google.list, Google                             // Google
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/amazon.list, Proxy                              // Amazon
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/unsplash.list, Proxy                            // Unsplash
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/soundcloud.list, SoundCloud                     // SoundCloud
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/bilibili.list, Bilibili                         // Bilibili
-RULE-SET,https://raw.githubusercontent.com/iarchean/SurgeConfig/master/special/steam.list, Steam                               // Steam
+RULE-SET,https://raw.githubusercontent.com/ydzydzydz/Rules/master/special/applenews-region.list, AppleNewsRegion               // AppleNews 地区限制
+RULE-SET,https://raw.githubusercontent.com/ydzydzydz/Rules/master/special/applenews.list, AppleNews                            // AppleNews
+RULE-SET,https://raw.githubusercontent.com/ydzydzydz/Rules/master/special/telegram.list, Proxy                                 // Telegram
+RULE-SET,https://raw.githubusercontent.com/ydzydzydz/Rules/master/special/twitter.list, Proxy                                  // Twitter
+RULE-SET,https://raw.githubusercontent.com/ydzydzydz/Rules/master/special/facebook.list, Proxy                                 // Facebook
+RULE-SET,https://raw.githubusercontent.com/ydzydzydz/Rules/master/special/netflix.list, Netflix                                // Netflix
+RULE-SET,https://raw.githubusercontent.com/ydzydzydz/Rules/master/special/youtube.list, YouTube                                // YouTube
+RULE-SET,https://raw.githubusercontent.com/ydzydzydz/Rules/master/special/spotify.list, Spotify                                // Spotify
+RULE-SET,https://raw.githubusercontent.com/ydzydzydz/Rules/master/special/bbc.list, Proxy                                      // BBC
+RULE-SET,https://raw.githubusercontent.com/ydzydzydz/Rules/master/special/paypal.list, Proxy                                   // PayPal
+RULE-SET,https://raw.githubusercontent.com/ydzydzydz/Rules/master/special/microsoft.list, Proxy                                // Microsoft
+RULE-SET,https://raw.githubusercontent.com/ydzydzydz/Rules/master/special/google.list, Google                                  // Google
+RULE-SET,https://raw.githubusercontent.com/ydzydzydz/Rules/master/special/amazon.list, Proxy                                   // Amazon
+RULE-SET,https://raw.githubusercontent.com/ydzydzydz/Rules/master/special/unsplash.list, Proxy                                 // Unsplash
+RULE-SET,https://raw.githubusercontent.com/ydzydzydz/Rules/master/special/soundcloud.list, SoundCloud                          // SoundCloud
+RULE-SET,https://raw.githubusercontent.com/ydzydzydz/Rules/master/special/bilibili.list, Bilibili                              // Bilibili
+RULE-SET,https://raw.githubusercontent.com/ydzydzydz/Rules/master/special/steam.list, Steam                                    // Steam
 # lhie1规则
 RULE-SET,https://raw.githubusercontent.com/lhie1/Rules/master/Surge3/reject.list, Ad-Block                                     // 广告
 RULE-SET,https://raw.githubusercontent.com/lhie1/Rules/master/Surge3/apple.list, Apple                                         // 苹果

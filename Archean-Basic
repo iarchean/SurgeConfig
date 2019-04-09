@@ -1,0 +1,94 @@
+#!MANAGED-CONFIG https://raw.githubusercontent.com/iarchean/SurgeConfig/master/Archean-Basic interval=600
+# 
+# Shorter URL: https://git.io/ArchSurgeB
+# Surge 的规则配置手册: https://manual.nssurge.com/
+# 
+# Update: 2019-04-09
+
+[General]
+loglevel = notify
+dns-server = 1.2.4.8, 223.5.5.5, 223.6.6.6, 114.114.114.114, 119.29.29.29, 117.50.10.10, system
+skip-proxy = 127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,100.64.0.0/10,17.0.0.0/8,localhost,*.local,*.crashlytics.com
+external-controller-access = archean@0.0.0.0:6155
+allow-wifi-access = true
+enhanced-mode-by-rule = false
+show-error-page-for-reject = true
+wifi-access-http-port = 6152
+wifi-access-socks5-port = 6153
+compatibility-mode = 0
+exclude-simple-hostnames = true
+ipv6 = true
+replica = false
+network-framework = false
+internet-test-url = http://bing.com/
+proxy-test-url = http://bing.com/
+test-timeout = 5
+http-listen = 0.0.0.0:6152
+socks5-listen = 0.0.0.0:6153
+
+[Replica]
+hide-apple-request = true
+hide-crashlytics-request = true
+hide-udp = false
+use-keyword-filter = false
+
+[Proxy Group]
+Proxy = select, Auto, Fallback, Select
+Ad-Block = select, policy-path=https://raw.githubusercontent.com/iarchean/SurgeConfig/master/proxy/ad.list
+Domestic = select, DIRECT, Select, Proxy
+FinalRule = select, Proxy, Select, DIRECT
+Auto = url-test, policy-path=auto.list,  url = http://www.gstatic.com/generate_204, interval = 60
+Fallback = fallback, policy-path=auto.list,  url = http://www.gstatic.com/generate_204, interval = 60
+Select = select, policy-path=all.list
+
+[Rule]
+
+# 外部资源更新提醒
+AND,((DOMAIN,raw.githubusercontent.com), (USER-AGENT,Surge*)),DIRECT,notification-text="External ruleset updated!",notification-interval=3
+DOMAIN-SUFFIX,archeanz.com,DIRECT,notification-text="Archean's Blog",notification-interval=10
+
+# 实用规则片段集
+RULE-SET,https://github.com/Hackl0us/SS-Rule-Snippet/raw/master/Rulesets/Basic/Apple-proxy.list,Proxy
+RULE-SET,https://github.com/Hackl0us/SS-Rule-Snippet/raw/master/Rulesets/Basic/Apple-direct.list,DIRECT
+RULE-SET,https://github.com/Hackl0us/SS-Rule-Snippet/raw/master/Rulesets/Basic/CN.list,DIRECT
+RULE-SET,https://github.com/Hackl0us/SS-Rule-Snippet/raw/master/Rulesets/Basic/common-ad-keyword.list,Ad-Block
+RULE-SET,https://github.com/Hackl0us/SS-Rule-Snippet/raw/master/Rulesets/Basic/foreign.list,Proxy
+RULE-SET,https://github.com/Hackl0us/SS-Rule-Snippet/raw/master/Rulesets/App/social/Telegram.list,Proxy
+
+# 最终规则
+RULE-SET,SYSTEM,DIRECT
+RULE-SET,LAN,DIRECT
+GEOIP,CN,Domestic
+FINAL,FinalRule,dns-failed
+
+[Host]
+*.taobao.com = server:223.6.6.6
+*.tmall.com = server:223.6.6.6
+*.alicdn.com = server:223.5.5.5
+*.aliyun.com = server:223.5.5.5
+*.tencent.com = server:119.28.28.28
+*.qq.com = server:119.28.28.28
+*.weixin.com = server:119.28.28.28
+*.jd.com = server:119.28.28.28
+*.bilibili.com = server:119.29.29.29
+hdslb.com = server:119.29.29.29
+*.163.com = server:119.29.29.29
+*.126.com = server:119.29.29.29
+*.126.net = server:119.29.29.29
+*.127.net = server:119.29.29.29
+*.netease.com = server:119.29.29.29
+*.mi.com = server:119.29.29.29
+*.xiaomi.com = server:119.29.29.29
+relay01.baidu.com = server:10.10.10.10
+relay00.baidu.com = server:10.10.10.10
+*.baidu.com = server:system
+*.bdstatic.com = server:system
+*.pcbeta.com = 120.52.19.113
+cdn.pcbeta.attachment.inimc.com = 120.52.19.113
+cdn.pcbeta.static.inimc.com = 120.52.19.113
+cdn.pcbeta.css.inimc.com = 120.52.19.113
+ip6-localhost = ::1
+ip6-loopback = ::1
+
+[URL Rewrite]
+^https?://(www.)?(g|google).cn https://www.google.com 302
