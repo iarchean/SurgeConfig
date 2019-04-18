@@ -48,11 +48,14 @@ Select = select, policy-path=all.list
 
 [Rule]
 
-# 外部资源更新提醒
+# External resources update notification
 AND,((DOMAIN,raw.githubusercontent.com), (USER-AGENT,Surge*)),DIRECT,notification-text="External ruleset updated!",notification-interval=3
 DOMAIN-SUFFIX,archeanz.com,DIRECT,notification-text="Archean's Blog",notification-interval=10
 
-# 实用规则片段集
+# Custom rules
+RULE-SET,https://github.com/iarchean/SurgeConfig/raw/master/rule/myreject.list,AdPolicy
+
+# Useful external resources
 RULE-SET,https://github.com/Hackl0us/SS-Rule-Snippet/raw/master/Rulesets/Basic/Apple-proxy.list,Proxy
 RULE-SET,https://github.com/Hackl0us/SS-Rule-Snippet/raw/master/Rulesets/Basic/Apple-direct.list,DIRECT
 RULE-SET,https://github.com/Hackl0us/SS-Rule-Snippet/raw/master/Rulesets/Basic/CN.list,DIRECT
