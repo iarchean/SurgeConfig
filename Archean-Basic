@@ -3,7 +3,7 @@
 # Shorter URL: https://git.io/ArchSurgeB
 # Surge 的规则配置手册: https://manual.nssurge.com/
 # 
-# Update: 2019-04-09
+# Update: 2020-03-22
 
 [General]
 loglevel = notify
@@ -19,7 +19,7 @@ compatibility-mode = 0
 exclude-simple-hostnames = true
 ipv6 = true
 replica = false
-network-framework = false
+network-framework = true
 internet-test-url = http://bing.com/
 proxy-test-url = http://bing.com/
 test-timeout = 5
@@ -49,7 +49,7 @@ Select = select, policy-path=all.list
 [Rule]
 
 # External resources update notification
-AND,((DOMAIN,raw.githubusercontent.com), (USER-AGENT,Surge*)),DIRECT,notification-text="External ruleset updated!",notification-interval=3
+AND,((DOMAIN,raw.githubusercontent.com), (USER-AGENT,Surge*)),Proxy,notification-text="External ruleset updated!",notification-interval=3
 DOMAIN-SUFFIX,archeanz.com,DIRECT,notification-text="Archean's Blog",notification-interval=10
 
 # Custom rules
@@ -110,4 +110,5 @@ ca-p12 = MIIKPAIBAzCCCgYGCSqGSIb3DQEHAaCCCfcEggnzMIIJ7zCCBF8GCSqGSIb3DQEHBqCCBFA
 [SSID Setting]
 "Apple Store" suspend=true
 
-"Xu's iPhone" cellular-mode=true
+"Archean's iPhone" cellular-mode=true
+"Archean's iPhone M" cellular-mode=true
