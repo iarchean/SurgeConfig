@@ -1,4 +1,4 @@
-#!MANAGED-CONFIG https://raw.githubusercontent.com/iarchean/SurgeConfig/master/Archean-Basic interval=600
+#!MANAGED-CONFIG https://cdn.jsdelivr.net/gh/iarchean/SurgeConfig@master/Archean-Basic interval=600
 # 
 # Shorter URL: https://git.io/ArchSurgeB
 # Surge 的规则配置手册: https://manual.nssurge.com/
@@ -49,19 +49,18 @@ Select = select, policy-path=all.list
 [Rule]
 
 # External resources update notification
-AND,((DOMAIN,raw.githubusercontent.com), (USER-AGENT,Surge*)),Proxy,notification-text="External ruleset updated!",notification-interval=3
+AND,((DOMAIN,cdn.jsdelivr.net), (USER-AGENT,Surge*)),DIRECT,notification-text="External ruleset updated!",notification-interval=3
 DOMAIN-SUFFIX,archeanz.com,DIRECT,notification-text="Archean's Blog",notification-interval=10
 
 # Custom rules
-RULE-SET,https://github.com/iarchean/SurgeConfig/raw/master/rule/myreject.list,AdPolicy
 
 # Useful external resources
-RULE-SET,https://github.com/Hackl0us/SS-Rule-Snippet/raw/master/Rulesets/Basic/Apple-proxy.list,Proxy
-RULE-SET,https://github.com/Hackl0us/SS-Rule-Snippet/raw/master/Rulesets/Basic/Apple-direct.list,DIRECT
-RULE-SET,https://github.com/Hackl0us/SS-Rule-Snippet/raw/master/Rulesets/Basic/CN.list,DIRECT
-RULE-SET,https://github.com/Hackl0us/SS-Rule-Snippet/raw/master/Rulesets/Basic/common-ad-keyword.list,AdPolicy
-RULE-SET,https://github.com/Hackl0us/SS-Rule-Snippet/raw/master/Rulesets/Basic/foreign.list,Proxy
-RULE-SET,https://github.com/Hackl0us/SS-Rule-Snippet/raw/master/Rulesets/App/social/Telegram.list,Proxy
+RULE-SET,https://cdn.jsdelivr.net/gh/Hackl0us/SS-Rule-Snippet@master/Rulesets/Basic/Apple-proxy.list,Proxy
+RULE-SET,https://cdn.jsdelivr.net/gh/Hackl0us/SS-Rule-Snippet@master/Rulesets/Basic/Apple-direct.list,DIRECT
+RULE-SET,https://cdn.jsdelivr.net/gh/Hackl0us/SS-Rule-Snippet@master/Rulesets/Basic/CN.list,DIRECT
+RULE-SET,https://cdn.jsdelivr.net/gh/Hackl0us/SS-Rule-Snippet@master/Rulesets/Basic/common-ad-keyword.list,AdPolicy
+RULE-SET,https://cdn.jsdelivr.net/gh/Hackl0us/SS-Rule-Snippet@master/Rulesets/Basic/foreign.list,Proxy
+RULE-SET,https://cdn.jsdelivr.net/gh/Hackl0us/SS-Rule-Snippet@master/Rulesets/App/social/Telegram.list,Proxy
 
 # 最终规则
 RULE-SET,SYSTEM,DIRECT
