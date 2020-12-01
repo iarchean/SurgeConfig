@@ -55,12 +55,15 @@ DOMAIN-SUFFIX,archeanz.com,DIRECT,notification-text="Archean's Blog",notificatio
 # Custom rules
 
 # Useful external resources
-RULE-SET,https://cdn.jsdelivr.net/gh/Hackl0us/SS-Rule-Snippet@latest/Rulesets/Basic/Apple-proxy.list,Proxy
-RULE-SET,https://cdn.jsdelivr.net/gh/Hackl0us/SS-Rule-Snippet@latest/Rulesets/Basic/Apple-direct.list,DIRECT
-RULE-SET,https://cdn.jsdelivr.net/gh/Hackl0us/SS-Rule-Snippet@latest/Rulesets/Basic/CN.list,DIRECT
-RULE-SET,https://cdn.jsdelivr.net/gh/Hackl0us/SS-Rule-Snippet@latest/Rulesets/Basic/common-ad-keyword.list,AdPolicy
-RULE-SET,https://cdn.jsdelivr.net/gh/Hackl0us/SS-Rule-Snippet@latest/Rulesets/Basic/foreign.list,Proxy
-RULE-SET,https://cdn.jsdelivr.net/gh/Hackl0us/SS-Rule-Snippet@latest/Rulesets/App/social/Telegram.list,Proxy
+RULE-SET,https://cdn.jsdelivr.net/gh/Hackl0us/SS-Rule-Snippet@latest/Rulesets/Surge/Basic/Apple-proxy.list,Proxy
+RULE-SET,https://cdn.jsdelivr.net/gh/Hackl0us/SS-Rule-Snippet@latest/Rulesets/Surge/Basic/Apple-direct.list,DIRECT
+RULE-SET,https://cdn.jsdelivr.net/gh/Hackl0us/SS-Rule-Snippet@latest/Rulesets/Surge/Basic/CN.list,DIRECT
+RULE-SET,https://cdn.jsdelivr.net/gh/Hackl0us/SS-Rule-Snippet@latest/Rulesets/Surge/Basic/common-ad-keyword.list,AdPolicy
+RULE-SET,https://cdn.jsdelivr.net/gh/Hackl0us/SS-Rule-Snippet@latest/Rulesets/Surge/Basic/foreign.list,Proxy
+RULE-SET,https://cdn.jsdelivr.net/gh/Hackl0us/SS-Rule-Snippet@latest/Rulesets/Surge/App/social/Telegram.list,Proxy
+
+# 国内资源
+RULE-SET,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/Netease%20Music.list,Domestic
 
 # 最终规则
 RULE-SET,SYSTEM,DIRECT
